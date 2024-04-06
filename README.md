@@ -151,7 +151,7 @@ Please take a look within the example directory above, briefly looking at the `a
 ```make
 COMPILER=gcc -c
 LINKER=gcc
-CLFAGS=-Wall -pedantic -g
+CFLAGS=-Wall -pedantic -g
 
 .PHONY: clean
 
@@ -161,7 +161,7 @@ main: $(OBJECTS)
 	$(LINKER) $^ -o $@
 
 %.o:: %.c %.h
-	$(COMPILER) $(CLFAGS) $< -o $@
+	$(COMPILER) $(CFLAGS) $< -o $@
 
 clean:
 	rm -rf *.o

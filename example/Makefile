@@ -1,6 +1,6 @@
 COMPILER=gcc -c
 LINKER=gcc
-CLFAGS=-Wall -pedantic -g
+CFLAGS=-Wall -pedantic -g
 .PHONY: clean
 
 OBJECTS=$(patsubst %.c, %.o, $(wildcard *.c))
